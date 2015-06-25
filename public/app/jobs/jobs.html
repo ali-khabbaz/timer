@@ -1,0 +1,25 @@
+<div ng-controller="jobsCtrl as jobs">
+    <div class="last_day">
+        <p ng-repeat="info in jobs.last_data">
+            <span>{{info.date }}::::</span>
+            <span>{{info.begin}} -----> </span>
+            <span>{{info.end}}</span>
+            <span>Diff ---> {{info.diff}}</span>
+        </p>
+        <p>مجموع ساعات : {{jobs.last_day_time}}</p>
+    </div>
+    <div class="add_day">
+        <p>
+            <input type="submit" ng-click="jobs.addNewDayInput()" value="+">
+        </p>
+        <p ng-repeat="info in jobs.add_day">
+            <input type="text" placeholder="تاریخ" ng-model="info.date">
+            <input type="text" placeholder="آغاز" ng-model="info.begin">
+            <input type="text" placeholder="پایان" ng-model="info.end">
+            <span class="wr_inp" ng-show="info.wrong">اشتباه</span>
+        </p>
+        <p>
+            <input type="submit" ng-click="jobs.addUpdateDays(jobs.date ,jobs.begin , jobs.end )" value="ثبت">
+        </p>
+    </div>
+</div>
