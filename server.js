@@ -24,7 +24,9 @@ c.connect({
 });
 
 
-if (cluster.isMaster) {
+app.
+
+if(cluster.isMaster) {
 	// Fork workers.
 	for (var i = 0; i < numCPUs; i++) {
 		cluster.fork();
@@ -41,10 +43,7 @@ if (cluster.isMaster) {
 	app.use(bodyParser.json());
 	app.use(bodyParser.urlencoded());
 	app.use(cookieParser());
-	app.use(
-		express.static(path.join(__dirname, '/public'))
-	);
-
+	app.use(express.static(path.join(__dirname, '/public')));
 	app.use(passport.initialize());
 
 	passport.serializeUser(function (user, done) {

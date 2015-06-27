@@ -18,7 +18,6 @@
 		local_strategy = require('passport-local').Strategy,
 		c = new Client();
 
-
 	exports.app = app;
 	exports.express = express;
 	exports.q = q;

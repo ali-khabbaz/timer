@@ -2,8 +2,7 @@
 
 	var jwt = require('../requires.js').jwt,
 		showDb = require('../utilities.js').showDb,
-		query = '',
-		q = require('../utilities.js').q;
+		query = '';
 
 	function jobs(req, res) {
 		if (!req.headers.authorization) {
