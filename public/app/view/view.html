@@ -4,17 +4,43 @@
     </select>
     <div class="month-box">
         <div ng-repeat="info in view.items_in_row" ng-class="{ 'month-left': ($index+1)%7, 'month-last': !($index+1)%7 }">
-        <p>{{info.date}}</p>
+            <p>{{info.date}}</p>
             <table class="month-table">
                 <tr>
                     <th>begin</th>
                     <th>end</th>
                 </tr>
-				<tr ng-repeat="item in info.times">
-					<td>{{item.begin}}</td>
-					<td>{{item.end}}</td>
-				</tr>
+                <tr ng-repeat="item in info.times" ng-class="{ 'yellow' : item.dirty}">
+                    <form name="month_form_{{$parent.$index+1}}" method="post" action=''>
+                        <td>
+                            <input ng-model="item.begin" name="begin" type="text" ng-change="view.changeDirty($parent.$index+1 , $index+1)">
+                        </td>
+                        <td>
+                            <input ng-model="item.end" name="end" type="text" ng-change="view.changeDirty($parent.$index+1 , $index+1)">
+                        </td>
+                    </form>
+                </tr>
             </table>
         </div>
     </div>
+    <!-- <div class="salam">
+        <div ng-repeat="info in view.items_in_row" ng-class="{ 'month-left': ($index+1)%7, 'month-last': !($index+1)%7 }">
+            <p>{{info.date}}</p>
+            <table class="month-table">
+                <tr>
+                    <th>begin</th>
+                </tr>
+                <tr ng-repeat="item in info.times">
+                    <td>
+                        <p>
+                            <form method="post" action='' name="loginform0">
+                                <input type="text" name="begin0" placeholder="نام کاربری" ng-model="item.begin" ng-change="view.changge()">
+                                <span style="color:red" ng-show="loginform0.begin{{$index}}.$dirty">salam</span>
+                            </form>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div> -->
 </div>

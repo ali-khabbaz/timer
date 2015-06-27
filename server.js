@@ -24,7 +24,6 @@ c.connect({
 });
 
 
-app.
 
 if(cluster.isMaster) {
 	// Fork workers.
@@ -127,6 +126,7 @@ if(cluster.isMaster) {
 	var pdfServe = require('./server/apps/pdfServe.js').pdfServe;
 	var jobs = require('./server/apps/jobs.js').jobs;
 	var addUpdate = require('./server/apps/add_update.js').addUpdate;
+	var viewGetMonth = require('./server/apps/view_get_month.js').viewGetMonth;
 
 
 
@@ -156,6 +156,7 @@ if(cluster.isMaster) {
 
 	app.post('/app/jobs', jobs);
 	app.post('/app/add-update', addUpdate);
+	app.post('/app/view-get-month', viewGetMonth);
 	app.get('/', global);
 
 
