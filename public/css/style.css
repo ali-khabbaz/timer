@@ -182,7 +182,7 @@ h6,
 
 .bold {
     /*font-weight: bold;*/
-
+    
     padding-left: 0;
     font-size: 15px;
 }
@@ -203,7 +203,7 @@ h6,
 
 .bg {
     /*background-image: url('./img/bg.jpg');*/
-
+    
     background-color: #e5e5e5;
     background-repeat: repeat;
     /*padding-bottom: 20px;*/
@@ -232,7 +232,7 @@ h6,
     border-bottom-width: 2px;
     left: 0;
     /*margin: 10px 0 20px 0;*/
-
+    
     max-width: 540px;
     min-width: 320px;
     padding: 20px;
@@ -285,7 +285,7 @@ h6,
 
 .header .menu_container .menu ul li:hover {
     /* background-color: #444343; */
-
+    
     background-color: #9C9276;
 }
 
@@ -330,7 +330,7 @@ h6,
     height: 45px;
     padding: 12px;
     /* border-right: 5px solid #AEAE12; */
-
+    
     background-color: #797979;
     border-top: 2px solid #AEAE12;
 }
@@ -378,7 +378,7 @@ a:hover {
 .home_content > div {
     width: 100%;
     /* outline: 1px dotted black; */
-
+    
     margin-top: 95px;
 }
 
@@ -418,7 +418,7 @@ a:hover {
 .home_content .products {
     min-height: 10px;
     /* outline: 2px solid red; */
-
+    
     padding: 10px;
     background-color: #AEAE12;
     color: white;
@@ -862,4 +862,18 @@ p.caption {
     width: 10px;
     height: 10px;
     background-color: red;
+}
+
+.month-left {
+    float: left;
+}
+
+.month-box {
+    /* width: 100px;
+    height: 100px; */
+    background-color: red;
+}
+
+.month-last{
+    float: none;
 }

@@ -29,6 +29,12 @@ define(['app'], function (app) {
 				dependencies: [
 					'/app/jobs/jobsCtrl.js'
 				]
+			},
+			'/view': {
+				templateUrl: '/app/view/view.html',
+				dependencies: [
+					'/app/view/viewCtrl.js'
+				]
 			}
 		}
 	};

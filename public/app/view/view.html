@@ -1,0 +1,20 @@
+<div ng-controller="viewCtrl as view">
+    <p>{{view.sel_month}}</p>
+    <select ng-model="view.sel_month" ng-options="act.id as act.name for act in view.months" ng-change="view.chngMonth()">
+    </select>
+    <div class="month-box">
+        <div ng-repeat="info in view.items_in_row" ng-class="{ 'month-left': ($index+1)%7, 'month-last': !($index+1)%7 }">
+        <p>{{info.date}}</p>
+            <table class="month-table">
+                <tr>
+                    <th>begin</th>
+                    <th>end</th>
+                </tr>
+				<tr ng-repeat="item in info.times">
+					<td>{{item.begin}}</td>
+					<td>{{item.end}}</td>
+				</tr>
+            </table>
+        </div>
+    </div>
+</div>
